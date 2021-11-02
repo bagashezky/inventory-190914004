@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::get('/bagas', function () {
     echo "Hello World";
+
 });
 
 Route::get('/name/{bagas}', function ($bagas) {
@@ -30,3 +31,6 @@ Route::get('/name/{bagas}', function ($bagas) {
 Route::get('/name/{nrp}/{bagas}', function ($nrp,$bagas) {
     return $nrp ." " . $bagas;
 });
+Route::get('/person', 'PersonController@index');
+Route::get('/person/show/{param}', 'PersonController@show');
+Route::resource('/student','StudentController');
