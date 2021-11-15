@@ -33,4 +33,9 @@ Route::get('/name/{nrp}/{bagas}', function ($nrp,$bagas) {
 });
 Route::get('/person', 'PersonController@index');
 Route::get('/person/show/{param}', 'PersonController@show');
+Route::get('/person/sendData', 'PersonController@sendData');
+
+Route::get('/student', 'StudentController@index');
+Route::get('/student/sendData', 'StudentController@sendData');
 Route::resource('/student','StudentController');
+Route::get('my-academic/{course}/{task}/{quiz}/{mid_term}/{final}','StudentController@myCourse');
